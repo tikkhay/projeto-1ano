@@ -1,6 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</titl
+    <title>My blog</title>
+    <style>
+        header {
+            background-color: #01274D;
+            color: #D4D4D4;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 5px solid #001427;
+        }
+
+        main {
+            background-color: #D4D4D4;
+            color: #01274D;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        article{
+            display: flex;
+        }
+
+        img {
+            width: 145px;
+            height: 150px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>meu blog sobre o kaká</h1>
+        <p>vou compartilhar meus conhecimentos sobre o mundo do futebol, especialmente sobre meu jogador favorito, o
+            Kaká, o ultimo brasileiro a ser campeão da bola de ouro</p>
+    </header>
+    <main>
+        <article>
+
+
+            <img src="imagem blog.jpg" alt="Imagem do ex jogador profissional de futebol Ricardo Kaká">
+            <div>
+                <h2>meu primeiro post</h2>
+                <p class=”artigo-autor”>por: Davi Henrique</p>
+                <p>boas vindas ao meu novo blog, aqui vou compartilhar meus conhecimentos sobre o mundo do futebol</p>
+                <button>👍 <span>0</span></button>
+                <button>👎 <span>0</span></button>
+            </div>
+        </article>
+        
+        <article>
+
+            <img src="imagem blog.jpg" alt="Imagem do ex jogador profissional de futebol Ricardo Kaká">
+            <div>
+                <h2>meu segundo post</h2>
+                <p class=”artigo-autor”>por: Davi Henrique</p>
+                <p>boas vindas ao meu novo blog, aqui vou compartilhar meus conhecimentos sobre o mundo do futebol</p>
+                <button>👍 <span>0</span></button>
+                <button>👎 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+     let curtiu = false;
+    botoes.forEach(function (botao) {
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+    console.log("fui clicado");
+    let texto = botao.querySelector("span");
+    if (curtiu === false){
+        texto.textContent++;
+        curtiu = true;
+    } else {
+        texto.textContent--;
+        curtiu = false;
+    }
+     }
+    }
+    )
+</script>
+
+</html>
